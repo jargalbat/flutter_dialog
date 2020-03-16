@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dialog/github_screen.dart';
 import 'package:flutter_dialog/second_screen.dart';
 import 'package:flutter_dialog/spinkit_screen.dart';
 
@@ -11,14 +12,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
   static List<Widget> _widgetOptions = <Widget>[
     SpinKitScreen(),
     SecondScreen(),
-    Text(
-      '3rd screen',
-      style: optionStyle,
-    ),
+    GitHubScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -33,9 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Flutter dialog'),
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -48,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            title: Text('3rd'),
+            title: Text('GitHub'),
           ),
         ],
         currentIndex: _selectedIndex,
