@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dialog/github_screen.dart';
-import 'package:flutter_dialog/second_screen.dart';
+import 'package:flutter_dialog/packages_screen.dart';
+import 'package:flutter_dialog/color_loader_screen.dart';
 import 'package:flutter_dialog/spinkit_screen.dart';
+import 'package:flutter_dialog/third_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -15,8 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static List<Widget> _widgetOptions = <Widget>[
     SpinKitScreen(),
-    SecondScreen(),
-    GitHubScreen(),
+    ThirdScreen(),
+    ColorLoaderScreen(),
+    PackagesScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -31,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Flutter dialog'),
       ),
+      drawer: _drawer(),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -43,13 +46,48 @@ class _HomeScreenState extends State<HomeScreen> {
             title: Text('2nd'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            title: Text('GitHub'),
+            icon: Icon(Icons.business),
+            title: Text('3rd'),
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
+      ),
+    );
+  }
+
+  _drawer() {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          DrawerHeader(
+            child: Text('Flutter dialog'),
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+          ),
+          ListTile(
+            title: Text('Packages'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PackagesScreen()),
+              );
+            },
+          ),
+//          ListTile(
+//            title: Text('Item 2'),
+//            onTap: () {
+//              // Update the state of the app
+//              // ...
+//              // Then close the drawer
+//              Navigator.pop(context);
+//            },
+//          ),
+        ],
       ),
     );
   }
