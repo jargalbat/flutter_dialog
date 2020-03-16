@@ -48,95 +48,95 @@ class _SpinKitScreenState extends State<SpinKitScreen> {
   List<Widget> _list = [
     SpinKitRotatingCircle(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitRotatingPlain(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitDoubleBounce(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitWave(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitWanderingCubes(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitFadingFour(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitFadingCube(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitPulse(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitChasingDots(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitThreeBounce(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitCircle(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitCubeGrid(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitFadingCircle(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitRotatingCircle(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitFoldingCube(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitPumpingHeart(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitDualRing(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitHourGlass(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitFadingGrid(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitRing(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitRipple(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitSpinningCircle(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
     SpinKitSquareCircle(
       color: Colors.white,
-      size: 50.0,
+      size: 30.0,
     ),
   ];
 }
